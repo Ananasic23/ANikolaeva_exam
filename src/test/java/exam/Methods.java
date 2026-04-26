@@ -139,7 +139,6 @@ public class Methods {
         return stock > 0;
     }
 
-    // Добавьте в класс Methods:
     static void addBookReview(Map<String, Integer> pathParams, String reviewJson) {
         String response = given()
                 .pathParams(pathParams)
@@ -151,14 +150,13 @@ public class Methods {
                 .post("http://10.82.196.214:8085/books/{id}/reviews")
                 .then()
                 .log().all()
-                .statusCode(201)  // Created
+                .statusCode(201)
                 .extract()
                 .body()
                 .asString();
         System.out.println(response);
     }
 
-    // Добавьте в класс Methods:
     static void getBookReviews(Map<String, Integer> pathParams) {
         String response = given()
                 .pathParams(pathParams)

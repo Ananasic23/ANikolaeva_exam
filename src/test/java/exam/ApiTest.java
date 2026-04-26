@@ -55,7 +55,6 @@ public class ApiTest {
         Map<String, Integer> pathParam = new HashMap<>();
         pathParam.put("id", 5);
 
-        // JSON для обновления
         String updates = """
         {
             "isbn": "978-0141182803",
@@ -110,7 +109,6 @@ public class ApiTest {
         Map<String, Integer> pathParam = new HashMap<>();
         pathParam.put("id", 5);  // ID книги
 
-        // Минимальный отзыв (только rating)
         String review = new JSONObject()
                 .put("rating", 5)
                 .put("comment", "Отличная книга!")
